@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import {Faqs} from "./Data";
 import styled from "styled-components"
 import {IconContext} from "react-icons"
-import { FiArrowDownCircle, FiArrowRightCircle } from "react-icons/fi";
+import { FaAngleRight, FaAngleDown } from "react-icons/fa";
 
 const FrequentlyAskedQuestionSection = styled.div`
     display:flex;
@@ -50,12 +50,13 @@ const Faq = () =>  {
         <IconContext.Provider value={{color:"#000", size:"15px"}} >
             <FrequentlyAskedQuestionSection className="container">
                 <Container>
+                    <h1 style={{fontSize:"30px"}}>FAQs</h1>
                     {Faqs.map((item, index) => {
                         return(
                             <>
                                 <Wrap onClick={() => toggle(index)} key={index}>
                                 <h1>{item.question}</h1>
-                                <span>{clicked === index ? <FiArrowDownCircle /> : <FiArrowRightCircle /> }</span>
+                                <span>{clicked === index ? <FaAngleDown /> : <FaAngleRight /> }</span>
                                 </Wrap>
                                 {clicked === index ? (
                                     <Dropdown>

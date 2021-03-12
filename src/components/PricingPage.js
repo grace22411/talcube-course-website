@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import styled from "styled-components"
 import { Link } from "react-router-dom"
 import {Prices} from "./Data"
-import { RegisterModal } from './Modal'
+import { GetEbookModal } from './Modal'
 
 const Container = styled.div`
     width:100%;
@@ -34,6 +34,11 @@ const Price = styled.div`
     select{
         width:100px;
         background-color:transparent;
+        outline:none;
+        margin-left:5px;
+        border:1px solid #CED4DA;
+        border-radius:3px;
+        padding:0 5px;
     }
     h1{
         font-size:25px;
@@ -67,6 +72,7 @@ const Button = styled.button`
    width:70%;
     border-radius:7px;
     color:#fff;
+    outline:none;
     border:none;
     background-color:#00A650;
     height:40px;
@@ -89,7 +95,6 @@ function PricingPage() {
         <Container className="container">
             <Pricing>
                 {priced.map(item => {
-                    console.log(item)
                     return(
                         <Price>
                             <h2>{item.type}</h2>
@@ -103,11 +108,10 @@ function PricingPage() {
                                 <option value="5">5</option>
                                 <option value="6">6</option>
                             </select>
-
-                            <h1>${item.price * module}/Module</h1>
-                            {/* <h3>Total: ${item.price * module}</h3> */}
-                            <Button onClick={openModal}>Start Free Trial</Button>
-                            <RegisterModal showModal={showModal} setShowModal={setShowModal} />
+                            <h1>${item.price}/Module</h1>
+                            <h2>Total: ${item.price * module}</h2>
+                            <Button><GetEbookModal totalPrice={item.price * module}/></Button>
+                            {/* <RegisterModal showModal={showModal} setShowModal={setShowModal} /> */}
 
                             <h3>{item.benefitTopic}</h3>
                             {item.benefits.map(benefits => (

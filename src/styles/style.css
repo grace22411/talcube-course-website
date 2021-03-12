@@ -1,0 +1,31 @@
+.ant-modal {
+    height: 100vh !important;
+    padding:0 !important;
+    background-color: transparent!important;
+   
+  }
+  .ant-modal-mask {
+    /* background-color: rgb(255, 255, 255, 0.4)!important; */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+  .ant-modal-header {
+    color:#00A650;
+  }
+  .ant-modal-title {
+    font-size: 23px;
+    color: #484848;
+    margin: 40px 0 20px 10px;
+  }
+  
+  
+  .ant-modal-body {
+    background-color: #fff !important;
+    padding:30px 15px !important;
+    margin-bottom: 50px;;
+  }
+  .ant-modal-footer
+ {
+    display: none;
+  }
+  

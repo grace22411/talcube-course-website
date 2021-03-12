@@ -9,6 +9,7 @@ const Container = styled.div`
     height:600px;
     background-color:#F0F0F0;
     padding:80px 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
     //clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 88%);
    
 

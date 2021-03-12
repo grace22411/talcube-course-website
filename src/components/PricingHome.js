@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
-
+import { Link } from "react-router-dom"
 
 const Container = styled.div`
 
@@ -12,6 +12,7 @@ const Price = styled.div`
     text-align:center;
     padding:40px;
     border-radius:20px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
     margin:auto;
     p{
         font-size:14px;
@@ -38,7 +39,7 @@ function PricingHome() {
             <Price>
                 <h3>Unbeatable Price</h3>
                 <p>Our Team of Specialists are here to help you get your online courses created and out to the world. Focus on what you do best and let us do your course planning, designing, building and set-up FOR YOU!</p>
-                <Button to="/pricing">View Full Pricing</Button>
+                <Link to="/pricing"><Button to="/pricing">View Full Pricing</Button></Link>
 
             </Price>
             

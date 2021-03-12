@@ -1,8 +1,10 @@
+
 import React from 'react'
 import Caption from '../components/Caption'
 import Endorsement from '../components/Endorsement'
 import Faq from '../components/Faq'
 import Header from '../components/Header'
+import PageFooter from '../components/PageFooter'
 import PricingHome from '../components/PricingHome'
 import Testimonials from '../components/Testimonials'
 import WhatWeDo from '../components/WhatWeDo'
@@ -16,6 +18,7 @@ const Home = () => {
             <Testimonials />
             <Faq />
             <PricingHome />
+            <PageFooter />
         </div>
     )
 }

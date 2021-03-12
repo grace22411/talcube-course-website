@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import styled from "styled-components"
 import PricingPage from '../components/PricingPage'
 import  Faq  from '../components/Faq'
+import PageFooter from '../components/PageFooter'
 
 const SectionText = styled.div`
     text-align:center;
@@ -30,6 +31,8 @@ Choose the best option for your online course needs.</p>
             <PricingPage />
 
             <Faq />
+
+            <PageFooter />
             
         </div>
     )
