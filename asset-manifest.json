@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/talcube-course-website/static/css/main.d72f15ed.chunk.css",
+    "main.js": "/talcube-course-website/static/js/main.7a0999bd.chunk.js",
+    "main.js.map": "/talcube-course-website/static/js/main.7a0999bd.chunk.js.map",
+    "runtime-main.js": "/talcube-course-website/static/js/runtime-main.39acdff1.js",
+    "runtime-main.js.map": "/talcube-course-website/static/js/runtime-main.39acdff1.js.map",
+    "static/css/2.d7a75e31.chunk.css": "/talcube-course-website/static/css/2.d7a75e31.chunk.css",
+    "static/js/2.05556559.chunk.js": "/talcube-course-website/static/js/2.05556559.chunk.js",
+    "static/js/2.05556559.chunk.js.map": "/talcube-course-website/static/js/2.05556559.chunk.js.map",
+    "static/js/3.02de075f.chunk.js": "/talcube-course-website/static/js/3.02de075f.chunk.js",
+    "static/js/3.02de075f.chunk.js.map": "/talcube-course-website/static/js/3.02de075f.chunk.js.map",
+    "index.html": "/talcube-course-website/index.html",
+    "static/css/2.d7a75e31.chunk.css.map": "/talcube-course-website/static/css/2.d7a75e31.chunk.css.map",
+    "static/css/main.d72f15ed.chunk.css.map": "/talcube-course-website/static/css/main.d72f15ed.chunk.css.map",
+    "static/js/2.05556559.chunk.js.LICENSE.txt": "/talcube-course-website/static/js/2.05556559.chunk.js.LICENSE.txt",
+    "static/media/caption-cut.b96799f8.png": "/talcube-course-website/static/media/caption-cut.b96799f8.png",
+    "static/media/checklist.b204d358.jpeg": "/talcube-course-website/static/media/checklist.b204d358.jpeg",
+    "static/media/logo.1630de67.png": "/talcube-course-website/static/media/logo.1630de67.png",
+    "static/media/money.aebad992.png": "/talcube-course-website/static/media/money.aebad992.png",
+    "static/media/pic.f0bbc030.png": "/talcube-course-website/static/media/pic.f0bbc030.png",
+    "static/media/secret.9572c251.png": "/talcube-course-website/static/media/secret.9572c251.png",
+    "static/media/what.870ac91e.png": "/talcube-course-website/static/media/what.870ac91e.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.39acdff1.js",
+    "static/css/2.d7a75e31.chunk.css",
+    "static/js/2.05556559.chunk.js",
+    "static/css/main.d72f15ed.chunk.css",
+    "static/js/main.7a0999bd.chunk.js"
+  ]
+}
