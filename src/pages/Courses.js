@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import firebaseDb from "../services/firebaseDb";
 import Header from '../components/Header'
 import axios from "axios"
 import styled from "styled-components"
@@ -8,6 +7,8 @@ import money from "../images/money.png"
 import { RegisterModal } from '../components/Modal';
 import PageFooter from '../components/PageFooter';
 import checklist from "../images/checklist.jpeg"
+import Sidebar from '../components/Sidebar'
+
 import { toast } from 'react-toastify';
 
 const SectionText = styled.div`
@@ -18,6 +19,13 @@ const SectionText = styled.div`
     }
     p{
         font-size:13px;
+    }
+    @media screen and (max-width: 480px) {
+      width:85%;
+      margin:50px auto 0 auto;
+      p{
+        font-size:12px;
+      }
     }
 
 `
@@ -39,9 +47,10 @@ const Course = styled.div`
     .overlay{
       width:100%;
       height:100%;
-      background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+      background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3));
       transition:0.2s ease-in;
       display:none;
+      backdrop-filter:blur(3px)
     }
     :hover{
       .overlay{
@@ -49,6 +58,10 @@ const Course = styled.div`
         align-items:center;
         justify-content:center;
       }
+    }
+    @media screen and (max-width: 480px) {
+      height:400px;
+      margin-bottom:30px;
     }
     
 `
@@ -63,9 +76,15 @@ const Courses = () => {
     axios.get(`https://talcube-api.herokuapp.com/ebook/free`
     ).then((response => setData(response.data))).catch((error) => console.log(error))
   }
+  const[isOpen, setIsOpen] = useState(false)
+
+    const toggle = () => {
+        setIsOpen(!isOpen)
+    }
   return (
     <div>
-      <Header/>
+      <Sidebar isOpen={isOpen} toggle={toggle} />
+      <Header toggle={toggle}/>
 
       <SectionText>
         <h2><span>Free </span>Email Course</h2>

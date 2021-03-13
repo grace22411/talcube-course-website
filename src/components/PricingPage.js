@@ -14,13 +14,15 @@ const Pricing = styled.div`
    width:100%;
     height:auto;
     display:flex;
+    flex-wrap:wrap;
 `
 const Price = styled.div`
-    width:30%;
+    min-width:30%;
     box-shadow:0 0 5px rgba(0,0,0,0.2);
     margin-left:30px;
     padding:30px;
     border-radius:10px;
+    margin-bottom:30px;
     text-align:center;
     background-color:rgba(0,0,0,0.05);
     h2{
@@ -65,6 +67,11 @@ const Price = styled.div`
         button{
             background-color:#f0f0f0; 
             color:#00A650
+        }
+    }
+    @media screen and (max-width: 480px) {
+        :nth-child(2){
+            margin-top:0;
         }
     }
 `

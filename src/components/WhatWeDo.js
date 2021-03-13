@@ -14,16 +14,25 @@ const Container = styled.div`
     background-repeat:no-repeat;
     //border:1px solid red;
     background-position:left;
+    @media screen and (max-width: 480px) {
+        background:transparent;
+    }
 
 `
 const SideColOne = styled.div`
     height:600px;
+    @media screen and (max-width: 480px) {
+        display:none;
+    }
 
 `
 const SideColTwo = styled.div`
     padding-right:200px;
     //border:1px solid red;
     padding-top:120px;
+    @media screen and (max-width: 480px) {
+        padding:30px;
+    }
 `
 
 const WhatWeDoCol = styled.div`
@@ -42,8 +51,27 @@ const WhatWeDoCol = styled.div`
         margin-left:25px;
         font-weight:600;
     }
+    @media screen and (max-width: 480px) {
+        img{
+        height:25px;
+        width:25px;
+    }
+    p{
+        font-size:13px;
+    }
+    }
 `
 
+const What = styled.h1`
+    font-weight:700;
+    font-size:20px;
+    margin-bottom:30px;
+    color:#00A650;
+    display:none;
+    @media screen and (max-width: 480px) {
+        display:block;
+    }
+`
 
 const WhatWeDo = () => {
     return (
@@ -52,6 +80,7 @@ const WhatWeDo = () => {
             <div className="row">
                 <SideColOne className="col-md-6"></SideColOne>
                 <SideColTwo className="col-md-6">
+                    <What>Below are what we do;</What>
                     <WhatWeDoCol>
                         <img src={creation} alt=""/>
                         <p>COURSE CONTENT CREATION</p> 

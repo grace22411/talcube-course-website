@@ -12,6 +12,13 @@ const FrequentlyAskedQuestionSection = styled.div`
 `
 const Container = styled.div`
     width:70%;
+    @media screen and (max-width: 480px) {
+        width:80%;
+        .topic{
+            font-weight:800;
+            color:#00A650
+        }
+    }
 `
 const Wrap = styled.div`
     display:flex;
@@ -26,6 +33,12 @@ const Wrap = styled.div`
     margin-top:30px;
     h1{
         font-size:16px;
+    }
+    @media screen and (max-width: 480px) {
+
+        h1{
+            font-size:14px;
+        }
     }
 `
 const Dropdown = styled.div`
@@ -50,7 +63,7 @@ const Faq = () =>  {
         <IconContext.Provider value={{color:"#000", size:"15px"}} >
             <FrequentlyAskedQuestionSection className="container">
                 <Container>
-                    <h1 style={{fontSize:"30px"}}>FAQs</h1>
+                    <h1 className="topic" style={{fontSize:"30px"}}>FAQs</h1>
                     {Faqs.map((item, index) => {
                         return(
                             <>

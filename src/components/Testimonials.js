@@ -11,7 +11,9 @@ const Container = styled.div`
     padding:80px 0;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
     //clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 88%);
-   
+    @media screen and (max-width: 480px) {
+        padding:60px 0 80px 0;
+    }
 
 `
 const Slide = styled.div`
@@ -60,6 +62,11 @@ const Slides = styled.div`
     display:inline-block;
     margin-left:70px;
     white-space:wrap;
+    @media screen and (max-width: 480px) {
+        margin-left:30px;
+        width:75%;
+    }
+    
   
 `
 
@@ -86,6 +93,10 @@ const Topic = styled.h2`
       color:#000;
       font-weight:600px;
       margin-bottom:30px;
+      @media screen and (max-width: 480px) {
+          font-size:15px;
+          font-weight:600;
+      }
 
 `
 function Testimonials() {

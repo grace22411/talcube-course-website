@@ -18,6 +18,13 @@ const Price = styled.div`
         font-size:14px;
         margin-top:20px;
     }
+    @media screen and (max-width: 480px) {
+        width:85%;
+        margin-top:40px;
+        p{
+            font-size:13px;
+        }
+    }
 
 `
 const Button = styled.button`
