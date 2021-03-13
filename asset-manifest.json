@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/talcube-course-website/static/css/main.d72f15ed.chunk.css",
-    "main.js": "/talcube-course-website/static/js/main.7a0999bd.chunk.js",
-    "main.js.map": "/talcube-course-website/static/js/main.7a0999bd.chunk.js.map",
+    "main.js": "/talcube-course-website/static/js/main.b187f9ff.chunk.js",
+    "main.js.map": "/talcube-course-website/static/js/main.b187f9ff.chunk.js.map",
     "runtime-main.js": "/talcube-course-website/static/js/runtime-main.39acdff1.js",
     "runtime-main.js.map": "/talcube-course-website/static/js/runtime-main.39acdff1.js.map",
     "static/css/2.d7a75e31.chunk.css": "/talcube-course-website/static/css/2.d7a75e31.chunk.css",
@@ -27,6 +27,6 @@
     "static/css/2.d7a75e31.chunk.css",
     "static/js/2.05556559.chunk.js",
     "static/css/main.d72f15ed.chunk.css",
-    "static/js/main.7a0999bd.chunk.js"
+    "static/js/main.b187f9ff.chunk.js"
   ]
 }
