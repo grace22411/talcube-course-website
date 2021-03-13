@@ -20,6 +20,8 @@ const SidebarContainer = styled.aside`
 
 const CloseIcon = styled(FaTimes)`
     color:#fff;
+    height:20px;
+    width:20px;
 `
 const Icon = styled.div`
     position:absolute;
@@ -47,7 +49,7 @@ const SidebarLink = styled(Link)`
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:1.5rem;
+    font-size:1.1rem;
     text-decoration:none;
     color:#fff;
     list-style-type:none;
