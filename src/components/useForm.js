@@ -1,37 +1,51 @@
-import React ,{useState, useEffect} from 'react'
+import axios from 'axios';
+import {useState} from 'react'
 
 
-const useForm = (callback,validate)  => {
+const useForm = ({callback,validate,initialValues})  => {
+  const url = "https://talcube-api.herokuapp.com/ebook/free"
    const[values, setValues] = useState({
-       fullname:"",
-       email:"",
+       ...initialValues
    });
+   
 
    const[errors, setErrors] = useState("")
    const [isSubmitting, setIsSubmitting] = useState(false);
    
 
    const handleChange = e => {
-       setValues({
-           ...values,
-           [e.target.name]: e.target.value
-       })
+     const newData = { ...values }
+     newData[e.target.name] = e.target.value
+     setValues(newData)
+     console.log(newData)
+      //  setValues({
+      //      ...values,
+      //      [e.target.name]: e.target.value
+      //  })
+      //  console.log(setValues)
    }
 
    const handleSubmit = e => {
        e.preventDefault()
-
+       axios.post(url,{
+         fullName:values.fullName,
+         email:values.email,
+         eBookType:values.eBookType,
+       })
+       .then(res => {
+          console.log(res.values)
+       })
        setErrors(validate(values));
        setIsSubmitting(true);
    }
-   useEffect(() => {
-      if (Object.keys(errors).length === 0 && isSubmitting) {
-        callback();
-      }
+  //  useEffect(() => {
+  //     if (Object.keys(errors).length === 0 && isSubmitting) {
+  //       callback();
+  //     }
    
-    },
-    [errors]
-  );
+  //   },
+  //   [errors]
+  // );
    return {handleChange, values, handleSubmit, errors}
 }
 

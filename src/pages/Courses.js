@@ -98,7 +98,7 @@ const Courses = () => {
                 <SideColTwo className="col-md-4">
                     <Course style={{backgroundImage:`url(${secret})`}}>
                       <div className="overlay">
-                          <RegisterModal />
+                          <RegisterModal  eBookType="Secret of Marketing via social media"/>
                       </div>
                         
                     </Course>
@@ -107,7 +107,7 @@ const Courses = () => {
                   <SideColTwo className="col-md-4">
                     <Course style={{backgroundImage:`url(${money})`}}>
                     <div className="overlay">
-                          <RegisterModal />
+                          <RegisterModal eBookType="How to make money with an online course"/>
                       </div>
                     </Course>
                   </SideColTwo>
@@ -115,7 +115,7 @@ const Courses = () => {
                   <SideColTwo className="col-md-4">
                     <Course style={{backgroundImage:`url(${checklist})`}}>
                     <div className="overlay">
-                    {!isSubmitted ? <RegisterModal submitForm={submitForm} /> : (alert('done'))}
+                     <RegisterModal  eBookType="Course Creation Checklist" />
                       </div>
                     </Course>
                   </SideColTwo>

@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from "styled-components"
-import { Link } from "react-router-dom"
 import {Testimonies} from "./Data"
 
 
@@ -104,10 +103,10 @@ function Testimonials() {
         <Container>
             <Topic>Join the 5,000+ online course creators<br /> already growing with us.</Topic>
             <Slide>
-                {Testimonies.map((item) => {
+                {Testimonies.map((item, index) => {
                     return(
                         <>
-                            <Slides>
+                            <Slides key={index}>
                                 <Picture  style={{backgroundImage:`url(${item.image})`}}>
                                     
                                 </Picture>

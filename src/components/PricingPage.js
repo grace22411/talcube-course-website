@@ -1,6 +1,5 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState } from 'react'
 import styled from "styled-components"
-import { Link } from "react-router-dom"
 import {Prices} from "./Data"
 import { GetEbookModal } from './Modal'
 
@@ -101,9 +100,9 @@ function PricingPage() {
     return (
         <Container className="container">
             <Pricing>
-                {priced.map(item => {
+                {priced.map((item,index) => {
                     return(
-                        <Price>
+                        <Price key={index}>
                             <h2>{item.type}</h2>
                             <p>{item.text}</p>
                             Module Number :
@@ -117,12 +116,12 @@ function PricingPage() {
                             </select>
                             <h1>${item.price}/Module</h1>
                             <h2>Total: ${item.price * module}</h2>
-                            <Button><GetEbookModal totalPrice={item.price * module}/></Button>
+                            <Button><GetEbookModal packageType={item.type} module={module} totalPrice={item.price * module}/></Button>
                             {/* <RegisterModal showModal={showModal} setShowModal={setShowModal} /> */}
 
                             <h3>{item.benefitTopic}</h3>
-                            {item.benefits.map(benefits => (
-                                <li>{benefits}</li>
+                            {item.benefits.map((benefits,index) => (
+                                <li key={index}>{benefits}</li>
                             ))}
                         </Price>
                     )

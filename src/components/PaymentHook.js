@@ -12,6 +12,11 @@ export default function App(props) {
     customer: {
       email: props.details.email,
       name: props.details.fullname,
+      classDuration:props.details.classDuration,
+      numberOfModules:props.details.numberOfModules,
+      description:props.details.description,
+      targetAudience:props.details.targetAudience
+      
     },
     customizations: {
       title: 'Talcube',
