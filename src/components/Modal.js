@@ -108,6 +108,7 @@ export const RegisterModal = ({ eBookType }) => {
                 placeholder="Ebook Type"
                 value={values.eBookType}
                 onChange={(e) => handleChange(e)}
+                disabled
               />
               <br></br>
               <button className="btn btn-success" type="submit">
@@ -181,6 +182,7 @@ export const GetEbookModal = (props) => {
       })
       .then(res => {
          console.log(res.data)
+         toast("Thanks! You will get a mail soon");
       })
   }
 

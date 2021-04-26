@@ -44,6 +44,21 @@ const Container = styled.div`
       }
     }
   }
+  @media only screen and (max-width:540px){
+      margin-top:30px;
+      .container{
+          .row{
+              .col-md-6{
+                  padding-top:80px;
+                  p{
+                      margin-top:-5px;
+                      width:100%;
+                      text-align:justify;
+                  }
+              }
+          }
+      }
+  }
 `;
 const PostFooter = styled.div`
   width: 100%;
@@ -73,7 +88,7 @@ function PageFooter() {
               platforms
             </p>
           </div>
-          <div className="col-md-3">
+          <div className="col-md-3 col-6">
             <h3>Company</h3>
             <li>
               <a href="https://www.talcube.com/about.html">About</a>
@@ -88,7 +103,7 @@ function PageFooter() {
               <a href="https://www.talcube.com/contact.html">Contact</a>
             </li>
           </div>
-          <div className="col-md-3">
+          <div className="col-md-3 col-6">
             <h3>Links</h3>
             <li>
               <a href="https://www.talcube.com/privacy.html">Privacy Policy</a>

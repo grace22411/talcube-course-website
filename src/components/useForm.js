@@ -1,6 +1,6 @@
 import axios from 'axios';
 import {useState} from 'react'
-
+import { toast } from "react-toastify";
 
 const useForm = ({callback,validate,initialValues})  => {
   const url = "https://talcube-api.herokuapp.com/ebook/free"
@@ -34,6 +34,8 @@ const useForm = ({callback,validate,initialValues})  => {
        })
        .then(res => {
           console.log(res.values)
+          toast("Thanks! You will get a mail soon");
+
        })
        setErrors(validate(values));
        setIsSubmitting(true);
