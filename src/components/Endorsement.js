@@ -13,6 +13,7 @@ const Container = styled.div`
         width:90%;
         height:auto;
         padding:24px 0 14px 0;
+        margin-top: -50px;
     }
 
 `

@@ -10,8 +10,9 @@ const Container = styled.div`
     padding:80px 0;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
     //clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 88%);
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 720px) {
         padding:60px 0 80px 0;
+        height:auto;
     }
 
 `
@@ -54,6 +55,7 @@ const Slide = styled.div`
 const Slides = styled.div`
     width:60%;
     background:#fff;
+    height:200px;
     //height:150px;
     border-radius:20px;
     color:#000;
@@ -61,29 +63,54 @@ const Slides = styled.div`
     display:inline-block;
     margin-left:70px;
     white-space:wrap;
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 720px) {
         margin-left:30px;
         width:75%;
+        height:auto;
+        margin-bottom:50px;
     }
     
   
 `
 
 const Picture = styled.div`
-    width:30%;
     height:200px;
     //background:red;
     background-size:cover;
-   
-    float:left;
-    border-top-left-radius:20px;
+    border-top-left-radius:18px;
     border-bottom-left-radius:20px;
+    @media screen and (max-width: 720px) {
+       // margin-left:30px;
+        
+    }
 `
 const Text = styled.div`
-    width:70%;
     display:inline-block;
     padding:30px;
     white-space:wrap;
+    p{
+        white-space:pre-wrap;
+    }
+    .name{
+        color: #00A650;
+        font-weight:600;
+        margin-bottom:0;
+        margin-top:40px;
+    }
+    .country{
+        font-weight:600;
+        color:#666;
+    }
+    @media screen and (max-width: 720px) {
+       // margin-left:30px;
+       p{
+           font-size:12px;
+           text-align:justify;
+       }
+       .name{
+           margin-top:20px;
+       }
+    }
 `
 
 const Topic = styled.h2`
@@ -107,15 +134,19 @@ function Testimonials() {
                     return(
                         <>
                             <Slides key={index}>
-                                <Picture  style={{backgroundImage:`url(${item.image})`}}>
-                                    
-                                </Picture>
+                                <div className="row">
+                                <div className="col-md-3"  >
+                                    <Picture style={{backgroundImage:`url(${item.image})`}}>
+
+                                    </Picture>
+                                </div>
                            
-                            <Text>
+                            <Text className="col-md-9">
                             <p>{item.testimony}</p>
-                                <p>{item.name}</p>
-                                <p>{item.country}</p>
+                                <p className="name">{item.name}</p>
+                                <p className="country">{item.country}</p>
                             </Text>
+                            </div>
                             </Slides>
                             
                         </>

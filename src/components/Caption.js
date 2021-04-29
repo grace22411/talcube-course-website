@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Header from './Header'
 import caption from "../images/caption-cut.png"
 import Sidebar from '../components/Sidebar'
+import { Link } from "react-router-dom"
 
 
 const Container = styled.div`
@@ -22,7 +23,7 @@ const ColumnOne = styled.div`
         background:linear-gradient(255,255,255,0.3);
         backdrop-filter:blur(2px);
         padding: 100px 0px 0 30px;;
-        height:100vh;
+        height:80vh;
 
     }
 `
@@ -62,7 +63,7 @@ const Caption = () => {
                 <ColumnOne>
                     <LetterHead> Get Successful,Profitable,<br></br>Done-For-You</LetterHead>
                     <p style={{fontSize:"12px", marginTop:"30px"}}>All the benefits of successful, profitable and scalable online courses - without the work</p>
-                    <Button to="/contact">Let's Talk</Button>
+                    <Link to="/contact"><Button>Let's Talk</Button></Link>
                 </ColumnOne>
                 
             </Container>

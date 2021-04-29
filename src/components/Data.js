@@ -26,7 +26,7 @@ export const Testimonies = [
     {
         image:pic,
         name:"James Cloy",
-        testimony:"Talcube exceeded my expectations and delivered in a very timely manner! \n I’m very grateful for her and her outstanding work! I highly recommend her services.",
+        testimony:"Talcube exceeded my expectations and delivered in a very timely manner!I’m very grateful for her and her outstanding work! I highly recommend her services.",
         country:"Canada"
 
     },
