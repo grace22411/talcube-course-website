@@ -197,7 +197,7 @@ export const GetEbookModal = (props) => {
   return (
     <>
       <a type="primary" onClick={showModal}>
-        Start Free Trial
+        Pay Now
       </a>
       <Modal
         title="Register To Get Service"
@@ -338,6 +338,7 @@ export const GetEbookModal = (props) => {
               </div>
             </form>
             <UsingHooks
+              onPaid={submit}
               details={{
                 ...premiumValues,
                 totalAmount: props.totalPrice,

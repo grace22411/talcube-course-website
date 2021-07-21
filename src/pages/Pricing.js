@@ -1,19 +1,31 @@
 import React, {useState} from 'react'
-import Header from '../components/Header'
 import styled from "styled-components"
 import PricingPage from '../components/PricingPage'
 import  Faq  from '../components/Faq'
 import PageFooter from '../components/PageFooter'
-import Sidebar from '../components/Sidebar'
+import {Link} from "react-router-dom"
+import Testimonials from '../components/Testimonials'
 
 const SectionText = styled.div`
     text-align:center;
-    margin-top:40px;
-    h2>span{
-        color:#00A650;
+    margin-top:70px;
+    h2{
+        font-size:20px;
+        font-weight:600;
     }
     p{
         font-size:13px;
+    }
+    button{
+        width:200px;
+    border-radius:7px;
+    color:#fff;
+    outline:none;
+    border:none;
+    background-color:#00A650;
+    height:40px;
+    font-weight:600;
+    text-decoration:none;
     }
     @media screen and (max-width: 480px) {
       width:85%;
@@ -26,25 +38,17 @@ const SectionText = styled.div`
 `
 
 const Pricing = () => {
-    const[isOpen, setIsOpen] = useState(false)
-
-    const toggle = () => {
-        setIsOpen(!isOpen)
-    }
     return (
         <div>
-            <Sidebar isOpen={isOpen} toggle={toggle} />
-            <Header toggle={toggle}/>
             <SectionText>
-                    <h2> <span>Flexible</span> Plans</h2>
-                    <p>Get up to 3-days free to try out any plan.<br></br>
-
-Choose the best option for your online course needs.</p>
+                    <h2> Interested in Having Us Create Your Online Course? <br />Get a free 30mins consultation call</h2>
+                    <p> </p>
+                   <a href="https://calendly.com/talcube/30min"><button>Schedule a call</button></a> 
 
             </SectionText>
             <PricingPage />
 
-            <Faq />
+            <Testimonials />
 
             <PageFooter />
             

@@ -76,16 +76,8 @@ const Courses = () => {
     axios.get(`https://talcube-api.herokuapp.com/ebook/free`
     ).then((response => setData(response.data))).catch((error) => console.log(error))
   }
-  const[isOpen, setIsOpen] = useState(false)
-
-    const toggle = () => {
-        setIsOpen(!isOpen)
-    }
   return (
     <div>
-      <Sidebar isOpen={isOpen} toggle={toggle} />
-      <Header toggle={toggle}/>
-
       <SectionText>
         <h2><span>Free </span>Email Course</h2>
         <p>Join 2,634+ entrepreneurs and new course creators who’ve found their online course idea. <br></br>

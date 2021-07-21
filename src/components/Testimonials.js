@@ -5,16 +5,15 @@ import {Testimonies} from "./Data"
 
 const Container = styled.div`
     width:100%;
-    height:600px;
-    background-color:#F0F0F0;
+    height:500px;
+    //background-color:#F0F0F0;
     padding:80px 0;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
-    //clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 88%);
+    //clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
     @media screen and (max-width: 720px) {
         padding:60px 0 80px 0;
         height:auto;
+        height:450px;
     }
-
 `
 const Slide = styled.div`
     overflow-y:hidden;
@@ -53,7 +52,7 @@ const Slide = styled.div`
       }
 `
 const Slides = styled.div`
-    width:60%;
+    width:40%;
     background:#fff;
     height:200px;
     //height:150px;
@@ -63,27 +62,16 @@ const Slides = styled.div`
     display:inline-block;
     margin-left:70px;
     white-space:wrap;
-    @media screen and (max-width: 720px) {
+    @media screen and (max-width: 600px) {
         margin-left:30px;
         width:75%;
-        height:auto;
-        margin-bottom:50px;
+        height:250px;
+        margin-bottom:40px;
     }
     
   
 `
 
-const Picture = styled.div`
-    height:200px;
-    //background:red;
-    background-size:cover;
-    border-top-left-radius:18px;
-    border-bottom-left-radius:20px;
-    @media screen and (max-width: 720px) {
-       // margin-left:30px;
-        
-    }
-`
 const Text = styled.div`
     display:inline-block;
     padding:30px;
@@ -95,13 +83,13 @@ const Text = styled.div`
         color: #00A650;
         font-weight:600;
         margin-bottom:0;
-        margin-top:40px;
+        margin-top:25px;
     }
     .country{
         font-weight:600;
         color:#666;
     }
-    @media screen and (max-width: 720px) {
+    @media screen and (max-width: 600px) {
        // margin-left:30px;
        p{
            font-size:12px;
@@ -117,7 +105,7 @@ const Topic = styled.h2`
       text-align:center;
       font-size:20px;
       color:#000;
-      font-weight:600px;
+      font-weight:700px;
       margin-bottom:30px;
       @media screen and (max-width: 480px) {
           font-size:15px;
@@ -135,13 +123,9 @@ function Testimonials() {
                         <>
                             <Slides key={index}>
                                 <div className="row">
-                                <div className="col-md-3"  >
-                                    <Picture style={{backgroundImage:`url(${item.image})`}}>
-
-                                    </Picture>
-                                </div>
+                                
                            
-                            <Text className="col-md-9">
+                            <Text className="col-md-12">
                             <p>{item.testimony}</p>
                                 <p className="name">{item.name}</p>
                                 <p className="country">{item.country}</p>

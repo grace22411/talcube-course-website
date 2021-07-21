@@ -12,8 +12,8 @@ const FrequentlyAskedQuestionSection = styled.div`
 `
 const Container = styled.div`
     width:70%;
-    @media screen and (max-width: 480px) {
-        width:80%;
+    @media screen and (max-width: 600px) {
+        width:85%;
         .topic{
             font-weight:800;
             color:#00A650
@@ -63,7 +63,7 @@ const Faq = () =>  {
         <IconContext.Provider value={{color:"#000", size:"15px"}} >
             <FrequentlyAskedQuestionSection className="container">
                 <Container>
-                    <h1 className="topic" style={{fontSize:"30px"}}>FAQs</h1>
+                    <h1 className="topic" style={{fontSize:"30px", textAlign:"center", fontWeight:"700"}}>FAQs</h1>
                     {Faqs.map((item, index) => {
                         return(
                             <>

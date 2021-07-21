@@ -35,7 +35,8 @@ export default function App(props) {
           handleFlutterPayment({
             callback: (response) => {
                console.log(response);
-                closePaymentModal() // this will close the modal programmatically
+               props.onPaid();
+               closePaymentModal() // this will close the modal programmatically
             },
             onClose: () => {},
           });

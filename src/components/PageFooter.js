@@ -81,11 +81,7 @@ function PageFooter() {
           <div className="col-md-6">
             <img src={logo} alt="" />
             <p>
-              You bring the work, we deliver a Masterpiece. Talcube is
-              interested in making every work a masterpiece, by delivering the
-              masters. Your go-to one-stop platform for every service your
-              business needs to outsource with its business-as-a-service
-              platforms
+            We are a global online course creation company, empowering you to run your business with profitable online courses. Take the next step forward and join the thousands of online course creators growing their businesses by engaging and sharing their knowledge with audiences online everywhere.
             </p>
           </div>
           <div className="col-md-3 col-6">
@@ -110,9 +106,6 @@ function PageFooter() {
             </li>
             <li>
               <a href="https://www.talcube.com/terms.html">Terms of Use</a>
-            </li>
-            <li>
-              <a href="mailto:hello@talcube.com">Help</a>
             </li>
             <li>
               <a href="mailto:hello@talcube.com">Support</a>

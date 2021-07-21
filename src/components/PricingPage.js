@@ -6,7 +6,7 @@ import { GetEbookModal } from './Modal'
 const Container = styled.div`
     width:100%;
     height:auto;
-    margin-top:80px;
+    margin-top:100px;
     margin-bottom:40px;
 `
 const Pricing = styled.div`
@@ -14,6 +14,10 @@ const Pricing = styled.div`
     height:auto;
     display:flex;
     flex-wrap:wrap;
+    @media screen and (max-width: 600px) {
+        padding:0 20px;
+        flex-direction:column;
+    }
 `
 const Price = styled.div`
     min-width:30%;
@@ -68,7 +72,9 @@ const Price = styled.div`
             color:#00A650
         }
     }
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 600px) {
+        width:100%;
+        margin-left:0;
         :nth-child(2){
             margin-top:0;
         }

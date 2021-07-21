@@ -1,32 +1,62 @@
 import React from 'react'
 import styled from "styled-components"
 import { Link } from "react-router-dom"
+import price from "../images/price.svg"
 
 const Container = styled.div`
+    width:100%;
+    height:600px;
+    background-color:#F0F0F0;
+    padding:80px 100px;
+    display:flex;
+    justify-content:space-between;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+    @media screen and (max-width: 600px) {
+        padding:0px 0px;
+        flex-direction:column;
+    }
 
 `
 const Price = styled.div`
-    width:35%;
+    width:40%;
     height:auto;
-    background-color:#F5F5F5;
-    text-align:center;
     padding:40px;
     border-radius:20px;
-    box-shadow:0 4px 8px rgba(0,0,0,0.1);
-    margin:auto;
+    h2{
+        font-size:25px;
+        font-weight:700;
+    }
     p{
         font-size:14px;
         margin-top:20px;
     }
-    @media screen and (max-width: 480px) {
-        width:85%;
+    @media screen and (max-width: 600px) {
+        width:100%;
         margin-top:40px;
+        padding:15px 30px;
         p{
             font-size:13px;
         }
     }
 
 `
+const PriceImage = styled.div`
+    width:50%;
+    img{
+        width:auto;
+        height:350px;
+    }
+    @media screen and (max-width: 600px) {
+        width:100%;
+        height:300px;
+        img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
+    }
+`
+
 const Button = styled.button`
     width:170px;
     border-radius:7px;
@@ -44,11 +74,15 @@ function PricingHome() {
     return (
         <Container className="container-fluid">
             <Price>
-                <h3>Unbeatable Price</h3>
-                <p>Our Team of Specialists are here to help you get your online courses created and out to the world. Focus on what you do best and let us do your course planning, designing, building and set-up FOR YOU!</p>
+                <h2>Unbeatable Price</h2>
+                <p>Our Team of Specialists is here to help you get your online courses created and out to the world. Focus on what you do best, and let us do your course planning, designing, building, and set-up FOR YOU!
+                    </p>
                 <Link to="/pricing"><Button to="/pricing">View Full Pricing</Button></Link>
 
             </Price>
+            <PriceImage>
+                <img src={price} alt="" /> 
+            </PriceImage>
             
         </Container>
     )
