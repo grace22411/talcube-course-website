@@ -38,7 +38,7 @@ export const Testimonies = [
 
     },
     {
-        name:"Firefox",
+        name:"Ruth McCrackin,RAM International",
         testimony:"Loved loved loved working with Talcube. they communicated every step of the way. and delivered my project quick. will definitely be utilizing them again.",
         country:" United States"
 

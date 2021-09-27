@@ -18,11 +18,6 @@ const useForm = ({callback,validate,initialValues})  => {
      newData[e.target.name] = e.target.value
      setValues(newData)
      console.log(newData)
-      //  setValues({
-      //      ...values,
-      //      [e.target.name]: e.target.value
-      //  })
-      //  console.log(setValues)
    }
 
    const handleSubmit = e => {
@@ -33,21 +28,14 @@ const useForm = ({callback,validate,initialValues})  => {
          eBookType:values.eBookType,
        })
        .then(res => {
-          console.log(res.values)
+          console.log(res)
           toast("Thanks! You will get a mail soon");
 
        })
        setErrors(validate(values));
        setIsSubmitting(true);
    }
-  //  useEffect(() => {
-  //     if (Object.keys(errors).length === 0 && isSubmitting) {
-  //       callback();
-  //     }
-   
-  //   },
-  //   [errors]
-  // );
+  
    return {handleChange, values, handleSubmit, errors}
 }
 

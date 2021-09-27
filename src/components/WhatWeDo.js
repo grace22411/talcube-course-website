@@ -19,6 +19,10 @@ const Container = styled.div`
         text-align:center;
         color:#00A650;
         font-weight:700;
+       
+    }
+    .service{
+        font-size:21px;
     }
     @media screen and (max-width: 480px) {
         background:transparent;
@@ -89,7 +93,7 @@ const WhatWeDo = () => {
     return (
         <Container>
             <h2>It’s Time to Get Your Online Course Launched!</h2>
-                <p>OUR SERVICES</p>
+                <p className="service">OUR SERVICES</p>
             <div className="container-fluid">
                 
             <div className="row">

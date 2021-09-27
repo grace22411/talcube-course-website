@@ -115,7 +115,7 @@ function PageFooter() {
       </div>
       <PostFooter>
         <div className="container">
-          <p>©Talcube - 2020 All Rights Reserved</p>
+          <p>©Talcube - 2021 All Rights Reserved</p>
         </div>
       </PostFooter>
     </Container>

@@ -11,6 +11,9 @@ const Container=styled.div`
           margin-bottom:15px;
         .text {
           text-align: center;
+          p{
+            font-size: 16px;;
+          }
           i {
             color: #888a94;
             margin-right: 10px;
@@ -43,12 +46,12 @@ const Contact = () => {
               <div className="row">
                   <div className="col-md-4">
                       <div className="text">
-                          <p><i className="fas fa-phone"></i> +234 8166 656 783</p>
+                          <p><i className="fas fa-phone"></i> +234 813 2465 611</p>
                       </div>
                   </div>
                   <div className="col-md-4">
                     <div className="text middle">
-                        <p><i className="fas fa-envelope"></i> holla@aikiservices.com</p>
+                        <p><i className="fas fa-envelope"></i> hello@talcube.com</p>
                     </div>
                 </div>
                 <div className="col-md-4">

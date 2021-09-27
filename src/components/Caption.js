@@ -78,7 +78,7 @@ const Caption = () => {
             <Container>
                 <ColumnOne>
                     <LetterHead> 100% Done-for-You Online Course Creation Services</LetterHead>
-                    <p style={{fontSize:"12px", marginTop:"30px"}}>No matter your Industry or Niche, we’ll create that online course for you</p>
+                    <p style={{fontSize:"14px", marginTop:"30px"}}>No matter your Industry or Niche, we’ll create that online course for you.</p>
                     <Link to="/contact"><Button>Let's Talk</Button></Link>
                 </ColumnOne>
                 <ColumnTwo>

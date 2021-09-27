@@ -41,7 +41,7 @@ const Pricing = () => {
     return (
         <div>
             <SectionText>
-                    <h2> Interested in Having Us Create Your Online Course? <br />Get a free 30mins consultation call</h2>
+                    <h2> Interested in Having Us Create Your Online Course? <br />Get a free 30mins consultation call.</h2>
                     <p> </p>
                    <a href="https://calendly.com/talcube/30min"><button>Schedule a call</button></a> 
 
